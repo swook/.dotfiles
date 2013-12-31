@@ -1,0 +1,11 @@
+# Ignore VIM backup files
+*~
+
+# Ignore any log files
+*.log
+
+# Ignore any .old files
+*.old
+
+# Ignore any core dumps
+*/core
