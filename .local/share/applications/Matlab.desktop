@@ -1,0 +1,14 @@
+[Desktop Entry]
+Categories=Science;
+Comment=
+Exec=/home/wookie/scripts/matlab -desktop
+Icon=/home/wookie/matlab/matlabicon.png
+Name=Matlab
+NoDisplay=false
+Path[$e]=$HOME/matlab/
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
