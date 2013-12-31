@@ -8,4 +8,4 @@
 *.old
 
 # Ignore any core dumps
-*/core
+core
