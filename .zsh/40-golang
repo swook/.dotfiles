@@ -1,0 +1,5 @@
+# Operations for Go language setup
+
+export GOPATH=$HOME/go
+export GOROOT=$HOME/src/go
+export PATH=$PATH:$GOPATH/bin
