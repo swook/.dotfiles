@@ -1,0 +1,10 @@
+#!/bin/bash
+
+args="$@"
+if [ "$#" -ge "1" ]; then
+	if [ -f $args ]; then
+		args="-r "${args%.*}
+	fi
+fi
+echo "matlab -nodesktop "$args
+$HOME/scripts/matlab -nodesktop $args
