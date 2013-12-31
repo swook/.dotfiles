@@ -1,0 +1,8 @@
+[extensions]
+codereview = $HOME/src/go/lib/codereview/codereview.py
+
+[codereview]
+server = codereview.appspot.com
+
+[ui]
+username = Seon-Wook Park <seon.wook@swook.net>
