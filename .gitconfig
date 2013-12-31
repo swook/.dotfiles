@@ -1,0 +1,27 @@
+[user]
+    name  = Seon-Wook Park
+    email = seon.wook@swook.net
+
+[color]
+    ui          = auto
+    interactive = auto
+
+[alias]
+    st       = status
+    ci       = commit
+    co       = checkout
+    goodpull = pull --rebase
+    staged   = diff --cached
+    unstaged = diff
+    both     = diff HEAD
+    oneline  = log --pretty=oneline
+    amend    = commit --amend
+    serve    = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = simple
+
+# vim: expandtab shiftwidth=4
