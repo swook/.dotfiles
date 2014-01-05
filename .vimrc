@@ -117,8 +117,9 @@ call vundle#rc()
 
 " Start nerdtree on startup
 Bundle 'scrooloose/nerdtree'
-autocmd vimenter * if !argc() | NERDTree | endif
-"autocmd vimenter * wincmd p
+"autocmd vimenter * if !argc() | NERDTree | endif
+autocmd vimenter * NERDTree
+autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
 
