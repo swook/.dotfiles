@@ -4,6 +4,9 @@ alias pass='apg -m 15 -x 22 -M lN'
 alias up='ping 8.8.8.8'
 alias nwatch='watch -n0,5'
 
+# VIM ALIASES
+alias -g vimrc='~/.vimrc'
+
 # GAE ALIASES
 alias gaedev='dev_appserver.py --port 9090 --datastore_path=./.datastore.db .'
 alias gaeup='appcfg.py --oauth2 update .'

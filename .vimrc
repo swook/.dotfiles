@@ -1,4 +1,3 @@
-
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -129,12 +128,28 @@ Bundle 'scrooloose/nerdcommenter'
 " Start vim-gocode
 Bundle 'Blackrush/vim-gocode'
 
+" Enable plugins for autocompletion
+Bundle 'AutoComplPop'
+Bundle 'SuperTab'
+
 " Bind CTRL-PgUp and CTRL-PgDown to tab switching
 map <C-PageUp> :tabp<CR>
 map <C-PageDown> :tabn<CR>
 
-" Remove all trailing whitespaces
+" Remove all trailing whitespaces on write
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Try to use system clipboard
+set clipboard=unnamedplus
+
+" Make <Home> jump to start of line ignoring prepended whitespace
+" to ignore indents
+map <Home> ^
+imap <Home> <Esc>^i
+
+" Visually mark 80 char column as grey
+set colorcolumn=80
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 " Trigger update
 filetype plugin indent on
