@@ -152,8 +152,9 @@ map <Home> ^
 imap <Home> <Esc>^i
 
 " Visually mark 80 char column as grey
-set colorcolumn=80
-highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+set t_Co=256
+let &colorcolumn=join(range(81,256),",")
+highlight ColorColumn ctermbg=None ctermfg=lightgrey
 
 " Trigger update
 filetype plugin indent on
