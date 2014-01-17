@@ -41,11 +41,6 @@ map Q gq
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
@@ -116,11 +111,11 @@ call vundle#rc()
 
 " Start nerdtree on startup
 Bundle 'scrooloose/nerdtree'
-"autocmd vimenter * if !argc() | NERDTree | endif
-autocmd vimenter * NERDTree
+Bundle 'jistr/vim-nerdtree-tabs'
+let NERDTreeMinimalUI=1
+autocmd vimenter * NERDTreeTabsToggle
 autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-map <C-n> :NERDTreeToggle<CR>
 
 " Start nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
@@ -136,7 +131,25 @@ Bundle 'Blackrush/vim-gocode'
 Bundle 'AutoComplPop'
 Bundle 'SuperTab'
 
-" Bind CTRL-PgUp and CTRL-PgDown to tab switching
+" Trigger update after bundles loaded
+filetype plugin indent on
+syntax on
+
+" Mouse configurations
+if has('mouse')
+  set mouse=a
+  set mousefocus " Added in hopes that this will work in the future...
+  set mousehide
+endif
+
+" Make <Home> jump to start of line ignoring prepended whitespace
+map <Home> ^
+imap <Home> <Esc>^i
+
+" CTRL-n for NERDTree toggling
+map <C-n> :NERDTreeTabsToggle<CR>
+
+" CTRL-PageUp/PageDown for tab switching
 map <C-PageUp> :tabp<CR>
 map <C-PageDown> :tabn<CR>
 
@@ -146,16 +159,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Try to use system clipboard
 set clipboard=unnamedplus
 
-" Make <Home> jump to start of line ignoring prepended whitespace
-" to ignore indents
-map <Home> ^
-imap <Home> <Esc>^i
-
 " Visually mark 80 char column as grey
 set t_Co=256
 let &colorcolumn=join(range(81,256),",")
 highlight ColorColumn ctermbg=None ctermfg=lightgrey
 
-" Trigger update
-filetype plugin indent on
-syntax on
