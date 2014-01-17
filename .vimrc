@@ -125,6 +125,10 @@ map <C-n> :NERDTreeToggle<CR>
 " Start nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
 
+" Start gitgutter
+Bundle 'airblade/vim-gitgutter'
+highlight SignColumn ctermbg=None
+
 " Start vim-gocode
 Bundle 'Blackrush/vim-gocode'
 
