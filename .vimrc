@@ -93,7 +93,7 @@ endif
 set number
 set smartindent
 set tabstop=8
-set shiftwidth=4
+set shiftwidth=8
 set showmatch
 set title
 
