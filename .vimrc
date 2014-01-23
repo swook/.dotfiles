@@ -159,6 +159,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Try to use system clipboard
 set clipboard=unnamedplus
 
+" Disable arrow keys for good practise
+noremap <Up>    <Nop>
+noremap <Down>  <Nop>
+noremap <Left>  <Nop>
+noremap <Right> <Nop>
+
 " Visually mark 80 char column as grey
 set t_Co=256
 let &colorcolumn=join(range(81,256),",")
