@@ -119,6 +119,14 @@ autocmd FileType go compiler go
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " For Vundle
+let bundledir = vimdir . 'bundle/'
+let vundledir = bundledir . 'vundle/'
+let vundleinstalled = 1
+if !isdirectory(vundledir)
+	let vundleinstalled = 0
+	execute 'silent !mkdir -p ' . bundledir
+	execute 'silent !git clone https://github.com/gmarik/vundle.git ' . vundledir
+endif
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
@@ -144,6 +152,9 @@ Bundle 'AutoComplPop'
 Bundle 'SuperTab'
 
 " Trigger update after bundles loaded
+if vundleinstalled == 0
+	BundleInstall
+endif
 filetype plugin indent on
 syntax on
 
