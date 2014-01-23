@@ -95,6 +95,7 @@ set smartindent
 set tabstop=8
 set shiftwidth=4
 set showmatch
+set title
 
 " Switch filetype off for plugin/bundle loading
 filetype off
