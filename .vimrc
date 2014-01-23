@@ -97,6 +97,18 @@ set shiftwidth=8
 set showmatch
 set title
 
+" Set backup and swap directories to avoid clutter
+let vimdir = expand('~/.vim/')
+let swpdir = vimdir . 'swaps/'
+let bkpdir = vimdir . 'backups/'
+if !isdirectory(swpdir) || !isdirectory(bkpdir)
+	execute 'silent !mkdir -p ' . swpdir
+	execute 'silent !mkdir -p ' . bkpdir
+endif
+" Add // to enable building of bkp/swp dirs
+let &directory = swpdir . '/'
+let &backupdir = bkpdir . '/'
+
 " Switch filetype off for plugin/bundle loading
 filetype off
 filetype plugin indent off
