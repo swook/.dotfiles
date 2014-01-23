@@ -4,6 +4,11 @@ alias pass='apg -m 15 -x 22 -M lN'
 alias up='ping 8.8.8.8'
 alias nwatch='watch -n0,5'
 
+# ETHERNET RESETTING
+alias e1000ereset='sudo rmmod e1000e && sudo modprobe e1000e'
+alias networkingreset='sudo service networking restart && sudo service network-manager restart'
+alias lanreset='e1000ereset && networkingreset'
+
 # VIM ALIASES
 alias -g vimrc='~/.vimrc'
 
