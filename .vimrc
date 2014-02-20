@@ -186,6 +186,9 @@ map <C-n> :NERDTreeTabsToggle<CR>
 map <C-PageUp> :tabp<CR>
 map <C-PageDown> :tabn<CR>
 
+" Map \p to toggle paste mode
+nnoremap <leader>p :set paste!<CR>
+
 " Remove all trailing whitespaces on write
 autocmd BufWritePre * :%s/\s\+$//e
 
