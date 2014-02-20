@@ -12,3 +12,8 @@ core
 
 # Ignore any shell history files
 *_history
+
+# Ignore some common folders
+Documents/
+Desktop/
+Stage/
