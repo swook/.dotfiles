@@ -156,6 +156,10 @@ Bundle 'Blackrush/vim-gocode'
 " Enable plugins for autocompletion
 Bundle 'AutoComplPop'
 Bundle 'SuperTab'
+Bundle 'Rip-Rip/clang_complete'
+
+" Enable surround
+Bundle 'tpope/vim-surround'
 
 " Trigger update after bundles loaded
 if vundleinstalled == 0
