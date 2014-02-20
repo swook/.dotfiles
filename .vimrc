@@ -103,13 +103,17 @@ set title
 let vimdir = expand('~/.vim/')
 let swpdir = vimdir . 'swaps/'
 let bkpdir = vimdir . 'backups/'
-if !isdirectory(swpdir) || !isdirectory(bkpdir)
+let unddir = vimdir . 'undos/'
+set undofile
+if !isdirectory(swpdir) || !isdirectory(bkpdir) || !isdirectory(unddir)
 	execute 'silent !mkdir -p ' . swpdir
 	execute 'silent !mkdir -p ' . bkpdir
+	execute 'silent !mkdir -p ' . unddir
 endif
 " Add // to enable building of bkp/swp dirs
 let &directory = swpdir . '/'
 let &backupdir = bkpdir . '/'
+let &undodir   = unddir . '/'
 
 " Switch filetype off for plugin/bundle loading
 filetype off
