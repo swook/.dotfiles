@@ -90,6 +90,8 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+set encoding=utf-8
+set spell spelllang=en_gb
 set number
 set smartindent
 set tabstop=8
