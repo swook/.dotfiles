@@ -140,6 +140,7 @@ call vundle#rc()
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 let NERDTreeMinimalUI=1
+let NERDTreeIgnore=['^.git$', '\.pyc$', '\~$']
 autocmd vimenter * if !argc() | NERDTree | wincmd p | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
