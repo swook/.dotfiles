@@ -1,11 +1,11 @@
 [Background]
-Color=229,229,193
+Color=255,255,200
 MaxRandomHue=0
 MaxRandomSaturation=0
 MaxRandomValue=0
 
 [BackgroundIntense]
-Color=246,245,152
+Color=255,255,192
 
 [Color0]
 Color=0,0,0
