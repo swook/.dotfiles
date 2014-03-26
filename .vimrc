@@ -159,8 +159,19 @@ Bundle 'AutoComplPop'
 Bundle 'SuperTab'
 Bundle 'Rip-Rip/clang_complete'
 
+" Enable plugins for LaTeX
+Bundle 'lervag/vim-latex'
+
 " Enable surround
 Bundle 'tpope/vim-surround'
+
+" Enable JSHint
+Bundle 'Shutnik/jshint2.vim'
+let jshint2_read = 1
+let jshint2_save = 1
+
+" Enable floobits
+"Bundle 'Floobits/floobits-vim'
 
 " Trigger update after bundles loaded
 if vundleinstalled == 0
