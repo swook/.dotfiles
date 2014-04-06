@@ -4,6 +4,10 @@ alias pass='apg -m 15 -x 22 -M lN'
 alias up='ping 8.8.8.8'
 alias nwatch='watch -n0,5'
 
+# BUP
+alias bupidx='bup index --one-file-system --exclude-from=$HOME/.bupexcludes $HOME'
+alias bupsave='bup save -r h:bup -n x230-home'
+
 # ETHERNET RESETTING
 alias e1000ereset='sudo rmmod e1000e && sudo modprobe e1000e'
 alias networkingreset='sudo service networking restart && sudo service network-manager restart'
