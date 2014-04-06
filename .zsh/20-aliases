@@ -36,6 +36,8 @@ alias asearch='aptitude search'
 alias ashow='aptitude show'
 alias ainst='sudo apt-get install'
 alias afile='apt-file search'
+alias ahold='sudo apt-mark hold'
+alias aunhold='sudo apt-mark unhold'
 
 # ZSH ALIASES
 alias -g zalias='~/.zsh/20-aliases'
