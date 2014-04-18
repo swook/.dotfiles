@@ -12,7 +12,6 @@ ex_path_add $HOME/bin
 ex_path_add $HOME/scripts
 
 # Application / language package binaries
-ex_path_add $HOME/src/go_appengine
 ex_path_add $HOME/node_modules/.bin
 ex_path_add $HOME/.cabal/bin
 
