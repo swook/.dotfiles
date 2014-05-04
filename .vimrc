@@ -91,12 +91,14 @@ if !exists(":DiffOrig")
 endif
 
 set encoding=utf-8
-set spell spelllang=en_gb
+set foldmethod=syntax
+set foldlevelstart=20
 set number
-set smartindent
-set tabstop=8
 set shiftwidth=8
 set showmatch
+set smartindent
+set spell spelllang=en_gb
+set tabstop=8
 set title
 
 " Set backup and swap directories to avoid clutter
