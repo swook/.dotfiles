@@ -160,6 +160,7 @@ Bundle 'Blackrush/vim-gocode'
 Bundle 'AutoComplPop'
 Bundle 'SuperTab'
 Bundle 'Rip-Rip/clang_complete'
+Bundle 'msanders/snipmate.vim'
 
 " Enable plugins for LaTeX
 Bundle 'lervag/vim-latex'
@@ -171,6 +172,16 @@ Bundle 'tpope/vim-surround'
 Bundle 'Shutnik/jshint2.vim'
 let jshint2_read = 1
 let jshint2_save = 1
+let jshint2_confirm = 0
+
+" Enable Syntastic
+Bundle 'scrooloose/syntastic'
+let g:syntastic_typescript_checkers = ["tslint"]
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_always_populate_loc_list = 1
+
+" Enable typescript-vim
+Bundle 'leafgarland/typescript-vim'
 
 " Enable floobits
 "Bundle 'Floobits/floobits-vim'
