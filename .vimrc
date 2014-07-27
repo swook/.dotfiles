@@ -121,11 +121,6 @@ let &undodir   = unddir . '/'
 filetype off
 filetype plugin indent off
 
-" For Go
-set rtp+=$GOROOT/misc/vim
-autocmd FileType go compiler go
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
 " For Vundle
 let bundledir = vimdir . 'bundle/'
 let vundledir = bundledir . 'vundle/'
@@ -137,6 +132,12 @@ if !isdirectory(vundledir)
 endif
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
+
+" For Go
+"set rtp+=$GOROOT/misc/vim
+Bundle 'jnwhiteh/vim-golang'
+autocmd FileType go compiler go
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " Start nerdtree on startup
 Bundle 'scrooloose/nerdtree'
