@@ -5,7 +5,6 @@
 alias l='ls -ahcl'
 alias up='ping 8.8.8.8'
 alias pass='apg -m 15 -x 22 -M lN'
-alias up='ping 8.8.8.8'
 
 # Debian apt
 alias apt-get='sudo apt-get'
