@@ -1,19 +1,5 @@
-# Ignore VIM backup files
-*~
-
-# Ignore any log files
-*.log
-
-# Ignore any .old files
-*.old
-
-# Ignore any core dumps
-core
-
-# Ignore any shell history files
-*_history
-
-# Ignore some common folders
-Documents/
-Desktop/
-Stage/
+# During setup:
+#
+# if a file already exists where symlink target is,
+# it is moved to the following directory
+backups/

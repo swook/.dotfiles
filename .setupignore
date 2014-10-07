@@ -1,0 +1,16 @@
+# File/folders pertaining to this .dotfiles repository
+backups/*
+.setupignore
+.git/*
+.gitignore
+.gitmodules
+
+# Setup and restore scripts
+setup.sh
+restore.sh
+
+# Submodules
+oh-my-zsh/*
+
+# oh-my-zsh custom files
+.zsh/*
