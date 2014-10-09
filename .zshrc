@@ -83,3 +83,6 @@ plugins+=(swook)
 # Setup oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Disable excessive (and unhelpful) command correction
+unsetopt correct_all
+
