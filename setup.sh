@@ -29,8 +29,8 @@ fi
 
 # For every non-ignored file in this folder
 while read -r f; do
-	sourcef=$(readlink -f "$(pwd)/$f")
-	targetf=$(readlink -f "$HOME/$f")
+	sourcef=$(realpath -s "$(pwd)/$f")
+	targetf=$(realpath -s "$HOME/$f")
 
 	# Check if target is already symlink to source
 	cursourcef=$(readlink -f "$targetf")
@@ -50,6 +50,7 @@ while read -r f; do
 
 	# Create symlink to current .dotfiles folder
 	ln -s "$sourcef" "$targetf"
+	echo "$sourcef > $targetf"
 
-done <<< "$(eval "find . -type f $IGNORESTR")"
+done <<< "$(eval "find . ! -type d $IGNORESTR")"
 
