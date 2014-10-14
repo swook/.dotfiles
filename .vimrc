@@ -1,21 +1,4 @@
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2011 Apr 15
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+" Use vim settings
 set nocompatible
 
 " allow backspacing over everything in insert mode
@@ -132,6 +115,9 @@ if !isdirectory(vundledir)
 endif
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
+
+" Use solarized colorscheme
+Plugin 'altercation/vim-colors-solarized'
 
 " For Go
 "set rtp+=$GOROOT/misc/vim

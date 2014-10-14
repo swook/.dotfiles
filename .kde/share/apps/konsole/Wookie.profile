@@ -16,7 +16,10 @@ RemoteTabTitleFormat=(%h) %w
 
 [Interaction Options]
 AutoCopySelectedText=false
-TrimTrailingSpacesInSelectedText=false
+TrimTrailingSpacesInSelectedText=true
+
+[Keyboard]
+KeyBindings=default
 
 [Terminal Features]
 BlinkingCursorEnabled=true
