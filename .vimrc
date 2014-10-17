@@ -135,9 +135,25 @@ imap <Home> <Esc>^i
 " CTRL-n for NERDTree toggling
 map <C-n> :NERDTreeTabsToggle<CR>
 
-" CTRL-PageUp/PageDown for tab switching
-map <C-PageUp> :tabp<CR>
-map <C-PageDown> :tabn<CR>
+" CTRL-PageUp/PageDown for tab and buffer switching
+function! MyPrevTab()
+	if tabpagenr('$') > 1
+		:tabp
+	else
+		:bprevious
+	endif
+endfunction
+
+function! MyNextTab()
+	if tabpagenr('$') > 1
+		:tabn
+	else
+		:bnext
+	endif
+endfunction
+
+map <C-PageUp> :call MyPrevTab()<CR>
+map <C-PageDown> :call MyNextTab()<CR>
 
 " Map \p to toggle paste mode
 nnoremap <leader>p :set paste!<CR>
