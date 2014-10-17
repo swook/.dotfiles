@@ -152,8 +152,10 @@ function! MyNextTab()
 	endif
 endfunction
 
-map <C-PageUp> :call MyPrevTab()<CR>
-map <C-PageDown> :call MyNextTab()<CR>
+map <C-h> :call MyPrevTab()<CR>
+map <C-j> :call MyPrevTab()<CR>
+map <C-k> :call MyNextTab()<CR>
+map <C-l> :call MyNextTab()<CR>
 
 " Map \p to toggle paste mode
 nnoremap <leader>p :set paste!<CR>
