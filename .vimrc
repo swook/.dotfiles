@@ -179,5 +179,5 @@ highlight ColorColumn ctermbg=None ctermfg=lightgrey
 set scrolloff=10
 
 autocmd BufRead,BufNewFile *.ts set expandtab shiftwidth=4 tabstop=4
-autocmd BufRead,BufNewFile *.m  set expandtab shiftwidth=2 tabstop=2
+autocmd BufRead,BufNewFile *.m  set noexpandtab shiftwidth=4 tabstop=4
 
