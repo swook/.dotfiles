@@ -183,5 +183,5 @@ set scrolloff=10
 autocmd BufRead,BufNewFile *.ts set expandtab shiftwidth=4
 autocmd BufRead,BufNewFile *.js set expandtab shiftwidth=2
 autocmd BufRead,BufNewFile *.html set expandtab shiftwidth=2
-autocmd BufRead,BufNewFile *.m  set noexpandtab shiftwidth=4
+autocmd BufRead,BufNewFile *.m  set expandtab shiftwidth=4
 
