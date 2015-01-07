@@ -34,3 +34,7 @@ alias netreset='sudo ifconfig eth0 down && \
 # bup
 alias bupidx='bup index --one-file-system --exclude-from=$HOME/.bupexcludes $HOME'
 alias bupsave='bup save -r h:bup -n x230-home .'
+
+# Disable interactive rm, cp from common-aliases
+unalias rm
+unalias cp
