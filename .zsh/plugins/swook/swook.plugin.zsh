@@ -16,7 +16,7 @@ alias aarem='apt-get autoremove --purge'
 alias asearch='aptitude search'
 alias ashow='aptitude show'
 alias ainst='apt-get install'
-alias afile='apt-file search'
+alias afile='apt-file'
 alias ahold='sudo apt-mark hold'
 alias aunhold='sudo apt-mark unhold'
 
