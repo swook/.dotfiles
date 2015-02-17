@@ -5,6 +5,9 @@
 # VIM is the answer
 export EDITOR=vim
 
+# Go-related
+export GOPATH="$HOME/go"
+
 # Personal binaries / scripts
 export PATH=$PATH:"$HOME/bin"
 export PATH=$PATH:"$HOME/scripts"
