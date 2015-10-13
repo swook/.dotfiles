@@ -33,7 +33,7 @@ export OMP_NUM_THREADS=4
 # Path to oh-my-zsh installation.
 # NOTE: Assumes placement of dotfiles repo at $HOME/.dotfiles
 export ZSH=$HOME/.dotfiles/oh-my-zsh
-ZSH_THEME="gallois"
+ZSH_THEME="swook"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -75,6 +75,9 @@ plugins=()
 # git status and functionality
 plugins+=(git)
 
+# Works on Ubuntu/openSUSE
+plugins+=(command-not-found)
+
 # Some common aliases like l, ll, G, L, ...
 plugins+=(common-aliases)
 
@@ -89,4 +92,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Disable excessive (and unhelpful) command correction
 unsetopt correct_all
-
