@@ -7,6 +7,7 @@ export EDITOR=vim
 
 # Go-related
 export GOPATH="$HOME/go"
+export PATH=$PATH:"$GOPATH/bin"
 
 # Personal binaries / scripts
 export PATH=$PATH:"$HOME/bin"
@@ -14,7 +15,12 @@ export PATH=$PATH:"$HOME/scripts"
 
 # Application / language package binaries
 export PATH=$PATH:"$HOME/node_modules/.bin"
-export PATH=$PATH:"$HOME/.cabal/bin"
+export PATH=$PATH:"$HOME/matlab/bin"
+export PYTHONPATH="$HOME/.local/lib/python2.7/:$PYTHONPATH"
+
+# Caffe
+export PYTHONPATH=$PYTHONPATH:"$HOME/src/caffe/distribute/python"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$HOME/src/caffe/distribute/lib"
 
 # For iBus
 #export GTK_IM_MODULE=ibus
@@ -24,7 +30,19 @@ export PATH=$PATH:"$HOME/.cabal/bin"
 # OpenMP related
 export OMP_NUM_THREADS=4
 
+# BETL2
+export ETH_ROOT="$HOME/src/ethGenericGrid/lib_eth_target"
+export BETL2_ROOT="$HOME/src/betl2/lib_betl2_target"
+export BOOST_ROOT=/usr
 
+# Google Cloud SDK
+if [ -d "$HOME/google-cloud-sdk" ]; then
+	# The next line updates PATH for the Google Cloud SDK.
+	source '/home/wookie/google-cloud-sdk/path.zsh.inc'
+
+	# The next line enables shell command completion for gcloud.
+	source '/home/wookie/google-cloud-sdk/completion.zsh.inc'
+fi
 
 #############################
 ## OH-MY-ZSH CONFIGURATION ##
