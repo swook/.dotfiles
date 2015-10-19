@@ -155,8 +155,6 @@ function! MyNextTab()
 endfunction
 
 map <C-h> :call MyPrevTab()<CR>
-map <C-j> :call MyPrevTab()<CR>
-map <C-k> :call MyNextTab()<CR>
 map <C-l> :call MyNextTab()<CR>
 
 " Map \p to toggle paste mode
