@@ -1,7 +1,8 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Categories=Science;
 Comment=
-Exec=/home/wookie/scripts/matlab -desktop
+Exec=/home/wookie/scripts/matlab.sh -desktop
 Icon=/home/wookie/matlab/matlabicon.png
 Name=Matlab
 NoDisplay=false

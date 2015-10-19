@@ -24,4 +24,7 @@
 [push]
     default = simple
 
+[rerere]
+    enabled = true
+
 # vim: expandtab shiftwidth=4

@@ -7,4 +7,4 @@ if [ "$#" -ge "1" ]; then
 	fi
 fi
 echo "matlab -nodesktop "$args
-$HOME/scripts/matlab -nodesktop $args
+$HOME/scripts/matlab.sh -nodesktop $args
