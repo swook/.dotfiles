@@ -28,7 +28,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$HOME/src/caffe/distribute/lib"
 #export QT_IM_MODULE=ibus
 
 # OpenMP related
-export OMP_NUM_THREADS=4
+export OMP_NUM_THREADS=$(nproc)
 
 # BETL2
 export ETH_ROOT="$HOME/src/ethGenericGrid/lib_eth_target"
@@ -36,13 +36,33 @@ export BETL2_ROOT="$HOME/src/betl2/lib_betl2_target"
 export BOOST_ROOT=/usr
 
 # Google Cloud SDK
-if [ -d "$HOME/google-cloud-sdk" ]; then
+GCLOUD_PATH="$HOME/google-cloud-sdk"
+if [ -d "$GCLOUD_PATH" ]; then
 	# The next line updates PATH for the Google Cloud SDK.
-	source '/home/wookie/google-cloud-sdk/path.zsh.inc'
+	source "$GCLOUD_PATH/path.zsh.inc"
 
 	# The next line enables shell command completion for gcloud.
-	source '/home/wookie/google-cloud-sdk/completion.zsh.inc'
+	source "$GCLOUD_PATH/completion.zsh.inc"
 fi
+
+# Caffe related
+export PYTHONPATH="$HOME/src/caffe/python:$PYTHONPATH"
+
+# CUDA related
+export CUDA_PATH="/usr/local/cuda"
+export LIBRARY_PATH="$CUDA_PATH/lib64:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="$CUDA_PATH/lib64:$LD_LIBRARY_PATH"
+export PATH="$CUDA_PATH/bin:$PATH"
+
+# Redwood related
+export BUNDLE_PATH="$HOME/.bundle"
+alias redwood_dev="cd $HOME/redwood_ws && . RedwoodInternal/Redwood/setup.zsh"
+alias redwood_run="cd $HOME/redwood_ws && . devel_linux/setup.zsh"
+alias redwood_debug="cd $HOME/redwood_ws && . devel_linux_debug/setup.zsh"
+
+# TUM RGB-D benchmark tools
+export PATH="$HOME/src/rgbd_benchmark_tools/src/rgbd_benchmark_tools:$PATH"
+
 
 #############################
 ## OH-MY-ZSH CONFIGURATION ##
