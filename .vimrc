@@ -87,11 +87,13 @@ Plugin 'Blackrush/vim-gocode'
 " Enable plugins for autocompletion
 Plugin 'AutoComplPop'
 Plugin 'SuperTab'
-Plugin 'Rip-Rip/clang_complete'
 Plugin 'msanders/snipmate.vim'
+"Plugin 'Rip-Rip/clang_complete'
+"let g:clang_library_path='/usr/lib/llvm-3.5/lib'
 
 " Enable plugins for LaTeX
-Plugin 'lervag/vim-latex'
+"Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+let g:tex_flavor='latex'
 
 " Enable surround
 Plugin 'tpope/vim-surround'
@@ -184,4 +186,6 @@ autocmd BufRead,BufNewFile *.ts set expandtab shiftwidth=4
 autocmd BufRead,BufNewFile *.js set expandtab shiftwidth=2
 autocmd BufRead,BufNewFile *.html set expandtab shiftwidth=2
 autocmd BufRead,BufNewFile *.m  set expandtab shiftwidth=4
+
+autocmd BufRead,BufNewFile **/opencv*/**/* set et ts=4 sw=4
 
