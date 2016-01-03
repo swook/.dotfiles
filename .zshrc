@@ -56,6 +56,7 @@ export PATH="$CUDA_PATH/bin:$PATH"
 
 # Redwood related
 export BUNDLE_PATH="$HOME/.bundle"
+export CCACHE_CPP2="yes"
 alias redwood_dev="cd $HOME/redwood_ws && . RedwoodInternal/Redwood/setup.zsh"
 alias redwood_run="cd $HOME/redwood_ws && . devel_linux/setup.zsh"
 alias redwood_debug="cd $HOME/redwood_ws && . devel_linux_debug/setup.zsh"
