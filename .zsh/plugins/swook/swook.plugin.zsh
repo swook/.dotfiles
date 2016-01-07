@@ -5,6 +5,7 @@
 alias l='ls -ahcl'
 alias up='ping 8.8.8.8'
 alias pass='apg -m 15 -x 22 -M lN'
+alias swapreset='sudo swapoff -a && sudo swapon -a'
 
 # Debian apt
 alias aup='sudo apt-get update'
