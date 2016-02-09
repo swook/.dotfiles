@@ -187,3 +187,4 @@ autocmd BufRead,BufNewFile *.m  set expandtab shiftwidth=4
 
 autocmd BufRead,BufNewFile **/opencv*/**/* set et ts=4 sw=4
 autocmd BufRead,BufNewFile ~/redwood_ws/** set expandtab shiftwidth=2 tabstop=2
+autocmd BufRead,BufNewFile ~/github/dark_shadow/** set expandtab shiftwidth=2 tabstop=2
