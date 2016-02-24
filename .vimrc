@@ -184,6 +184,7 @@ autocmd BufRead,BufNewFile *.ts set expandtab shiftwidth=4
 autocmd BufRead,BufNewFile *.js set expandtab shiftwidth=2
 autocmd BufRead,BufNewFile *.html set expandtab shiftwidth=2
 autocmd BufRead,BufNewFile *.m  set expandtab shiftwidth=4
+autocmd BufRead,BufNewFile *.cuh  set syntax=cuda
 
 autocmd BufRead,BufNewFile **/opencv*/**/* set et ts=4 sw=4
 autocmd BufRead,BufNewFile ~/redwood_ws/** set expandtab shiftwidth=2 tabstop=2
