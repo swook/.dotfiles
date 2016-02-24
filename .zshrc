@@ -49,10 +49,10 @@ fi
 export PYTHONPATH="$HOME/src/caffe/python:$PYTHONPATH"
 
 # CUDA related
-export CUDA_PATH="/usr/local/cuda"
-export LIBRARY_PATH="$CUDA_PATH/lib64:$LIBRARY_PATH"
-export LD_LIBRARY_PATH="$CUDA_PATH/lib64:$LD_LIBRARY_PATH"
-export PATH="$CUDA_PATH/bin:$PATH"
+#export CUDA_PATH="/usr/local/cuda"
+#export LIBRARY_PATH="$CUDA_PATH/lib64:$LIBRARY_PATH"
+#export LD_LIBRARY_PATH="$CUDA_PATH/lib64:$LD_LIBRARY_PATH"
+#export PATH="$CUDA_PATH/bin:$PATH"
 
 # Redwood related
 export BUNDLE_PATH="$HOME/.bundle"
