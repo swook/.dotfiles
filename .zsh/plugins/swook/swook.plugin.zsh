@@ -23,18 +23,19 @@ alias ahold='sudo apt-mark hold'
 alias aunhold='sudo apt-mark unhold'
 
 # KDE
-alias kreset='killall -9 plasmashell && kstart kwin_x11 --replace && kstart plasmashell'
+alias kreset='killall -9 plasmashell && \
+	      kstart kwin_x11 --replace && \
+              kstart plasmashell'
 
 # Network reset
-alias netreset='sudo ifconfig eth0 down && \
-		sudo service network-manager stop && \
+alias netreset='sudo NetworkManager stop && \
 		sudo service networking stop && \
+ 		sudo ifconfig eth0 down && \
                 sudo rmmod e1000e && \
 		sudo modprobe e1000e && \
+		sudo ifconfig eth0 up && \
 		sudo service networking start && \
-		sudo service network-manager start && \
-		sudo ifconfig eth0 up'
-
+                sudo NetworkManager start'
 
 # bup
 alias bupidx='bup index --one-file-system --exclude-from=$HOME/.bupexcludes $HOME'
