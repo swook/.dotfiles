@@ -94,6 +94,7 @@ let g:clang_library_path=split(globpath('/usr/lib/', 'llvm-*'), '\n')[0] . '/lib
 " Enable plugins for LaTeX
 Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 let g:tex_flavor='latex'
+let g:Imap_UsePlaceHolders = 0
 
 " Enable surround
 Plugin 'tpope/vim-surround'
@@ -185,8 +186,10 @@ autocmd BufRead,BufNewFile *.js set expandtab shiftwidth=2
 autocmd BufRead,BufNewFile *.html set expandtab shiftwidth=2
 autocmd BufRead,BufNewFile *.m  set expandtab shiftwidth=4
 autocmd BufRead,BufNewFile *.cuh  set syntax=cuda
-autocmd BufRead,BufNewFile *.tex set expandtab shiftwidth=2
+autocmd BufRead,BufNewFile *.tex set expandtab shiftwidth=2 modeline
+			\ spelllang=en_gb spell
 
 autocmd BufRead,BufNewFile **/opencv*/**/* set et ts=4 sw=4
 autocmd BufRead,BufNewFile ~/redwood_ws/** set expandtab shiftwidth=2 tabstop=2
 autocmd BufRead,BufNewFile ~/github/dark_shadow/** set expandtab shiftwidth=2 tabstop=2
+autocmd BufRead,BufNewFile ~/github/thesis/** set expandtab shiftwidth=2 tabstop=2
