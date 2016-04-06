@@ -28,14 +28,12 @@ alias kreset='killall -9 plasmashell && \
               kstart plasmashell'
 
 # Network reset
-alias netreset='sudo NetworkManager stop && \
-		sudo service networking stop && \
+alias netreset='sudo service network-manager stop && \
  		sudo ifconfig eth0 down && \
                 sudo rmmod e1000e && \
 		sudo modprobe e1000e && \
 		sudo ifconfig eth0 up && \
-		sudo service networking start && \
-                sudo NetworkManager start'
+                sudo service network-manager start'
 
 # bup
 alias bupidx='bup index --one-file-system --exclude-from=$HOME/.bupexcludes $HOME'
