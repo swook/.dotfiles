@@ -89,7 +89,7 @@ Plugin 'AutoComplPop'
 Plugin 'SuperTab'
 Plugin 'msanders/snipmate.vim'
 Plugin 'Rip-Rip/clang_complete'
-let g:clang_library_path=split(globpath('/usr/lib/', 'llvm-*'), '\n')[0] . '/lib/'
+"let g:clang_library_path=split(globpath('/usr/lib/', 'llvm-*'), '\n')[0] . '/lib/'
 
 " Enable plugins for LaTeX
 Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
