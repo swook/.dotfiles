@@ -64,6 +64,11 @@ alias redwood_debug="cd $HOME/redwood_ws && . devel_linux_debug/setup.zsh"
 # TUM RGB-D benchmark tools
 export PATH="$HOME/src/rgbd_benchmark_tools/src/rgbd_benchmark_tools:$PATH"
 
+# Activate Torch environment if installed
+if [ -f "$HOME/src/torch/install/bin/torch-activate" ]; then
+	. "$HOME/src/torch/install/bin/torch-activate"
+fi
+
 
 #############################
 ## OH-MY-ZSH CONFIGURATION ##
