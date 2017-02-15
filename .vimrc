@@ -86,9 +86,10 @@ highlight SignColumn ctermbg=None
 
 " Enable plugins for autocompletion
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'AutoComplPop'
-Plugin 'SuperTab'
-Plugin 'msanders/snipmate.vim'
+let g:ycm_python_binary_path = 'python3'
+"Plugin 'AutoComplPop'
+"Plugin 'SuperTab'
+"Plugin 'msanders/snipmate.vim'
 "Plugin 'Rip-Rip/clang_complete'
 "let g:clang_library_path=split(globpath('/usr/lib/', 'llvm-*'), '\n')[0] . '/lib/'
 
@@ -108,10 +109,15 @@ Plugin 'tpope/vim-surround'
 "let jshint2_confirm = 0
 
 " Enable Syntastic
-Plugin 'scrooloose/syntastic'
-let g:syntastic_typescript_checkers = ["tslint"]
-let g:syntastic_aggregate_errors = 1
+Plugin 'vim-syntastic/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Enable typescript-vim
 "Plugin 'leafgarland/typescript-vim'
