@@ -19,8 +19,8 @@ export PATH=$PATH:"$HOME/matlab/bin"
 export PYTHONPATH="$HOME/.local/lib/python2.7/:$PYTHONPATH"
 
 # Caffe
-export PYTHONPATH=$PYTHONPATH:"$HOME/src/caffe/distribute/python"
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$HOME/src/caffe/distribute/lib"
+export PYTHONPATH=$PYTHONPATH:"$HOME/src/caffe/build/python"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$HOME/src/caffe/build/lib"
 
 # For iBus
 #export GTK_IM_MODULE=ibus
@@ -45,14 +45,16 @@ if [ -d "$GCLOUD_PATH" ]; then
 	source "$GCLOUD_PATH/completion.zsh.inc"
 fi
 
-# Caffe related
-export PYTHONPATH="$HOME/src/caffe/python:$PYTHONPATH"
-
 # CUDA related
 #export CUDA_PATH="/usr/local/cuda"
 #export LIBRARY_PATH="$CUDA_PATH/lib64:$LIBRARY_PATH"
 #export LD_LIBRARY_PATH="$CUDA_PATH/lib64:$LD_LIBRARY_PATH"
 #export PATH="$CUDA_PATH/bin:$PATH"
+
+export CUDNN_PATH=$HOME/src/cudnn
+if [ -d "$CUDNN_PATH" ]; then
+	export LD_LIBRARY_PATH="$CUDNN_PATH/lib64:$LD_LIBRARY_PATH"
+fi
 
 # Redwood related
 export BUNDLE_PATH="$HOME/.bundle"
