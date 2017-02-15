@@ -82,28 +82,30 @@ Plugin 'airblade/vim-gitgutter'
 highlight SignColumn ctermbg=None
 
 " Start vim-gocode
-Plugin 'Blackrush/vim-gocode'
+"Plugin 'Blackrush/vim-gocode'
 
 " Enable plugins for autocompletion
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'AutoComplPop'
 Plugin 'SuperTab'
 Plugin 'msanders/snipmate.vim'
-Plugin 'Rip-Rip/clang_complete'
+"Plugin 'Rip-Rip/clang_complete'
 "let g:clang_library_path=split(globpath('/usr/lib/', 'llvm-*'), '\n')[0] . '/lib/'
 
 " Enable plugins for LaTeX
-Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
-let g:tex_flavor='latex'
-let g:Imap_UsePlaceHolders = 0
+Plugin 'lervag/vimtex'
+"Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+"let g:tex_flavor='latex'
+"let g:Imap_UsePlaceHolders = 0
 
 " Enable surround
 Plugin 'tpope/vim-surround'
 
 " Enable JSHint
-Plugin 'Shutnik/jshint2.vim'
-let jshint2_read = 1
-let jshint2_save = 1
-let jshint2_confirm = 0
+"Plugin 'Shutnik/jshint2.vim'
+"let jshint2_read = 1
+"let jshint2_save = 1
+"let jshint2_confirm = 0
 
 " Enable Syntastic
 Plugin 'scrooloose/syntastic'
@@ -112,7 +114,7 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_always_populate_loc_list = 1
 
 " Enable typescript-vim
-Plugin 'leafgarland/typescript-vim'
+"Plugin 'leafgarland/typescript-vim'
 
 " Enable floobits
 "Plugin 'Floobits/floobits-vim'
