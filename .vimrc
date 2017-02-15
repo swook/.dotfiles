@@ -1,14 +1,15 @@
 " Use vim settings
 set nocompatible
 
-"set encoding=utf-8
+set encoding=utf-8
 "set foldmethod=syntax
 "set foldlevelstart=20
 set number
 "set shiftwidth=8
 "set showmatch
-"set smartindent
-"set spell spelllang=en_gb
+set autoindent
+set smartindent
+set spell spelllang=en_gb
 "set tabstop=8
 "set title
 
@@ -29,21 +30,20 @@ let &backupdir = bkpdir . '/'
 let &undodir   = unddir . '/'
 
 " Switch filetype off for plugin/bundle loading
-filetype off
 filetype plugin indent off
 
 " For Vundle
 let bundledir = vimdir . 'bundle/'
-let vundledir = bundledir . 'vundle/'
+let vundledir = bundledir . 'Vundle.vim/'
 let vundleinstalled = 1
 if !isdirectory(vundledir)
 	let vundleinstalled = 0
 	execute 'silent !mkdir -p ' . bundledir
-	execute 'silent !git clone https://github.com/gmarik/vundle.git ' . vundledir
+	execute 'silent !git clone https://github.com/VundleVim/Vundle.vim.git ' . vundledir
 endif
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Plugin 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
 " Use airline for a better statusline
 Plugin 'bling/vim-airline'
@@ -56,15 +56,6 @@ Plugin 'tpope/vim-sensible'
 
 " Use fugitive for git
 Plugin 'tpope/vim-fugitive'
-
-" Use solarized colorscheme
-Plugin 'altercation/vim-colors-solarized'
-
-" For Go
-"set rtp+=$GOROOT/misc/vim
-Plugin 'jnwhiteh/vim-golang'
-autocmd FileType go compiler go
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " Start nerdtree on startup
 Plugin 'scrooloose/nerdtree'
@@ -81,32 +72,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 highlight SignColumn ctermbg=None
 
-" Start vim-gocode
-"Plugin 'Blackrush/vim-gocode'
-
 " Enable plugins for autocompletion
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_python_binary_path = 'python3'
-"Plugin 'AutoComplPop'
-"Plugin 'SuperTab'
-"Plugin 'msanders/snipmate.vim'
-"Plugin 'Rip-Rip/clang_complete'
-"let g:clang_library_path=split(globpath('/usr/lib/', 'llvm-*'), '\n')[0] . '/lib/'
 
 " Enable plugins for LaTeX
 Plugin 'lervag/vimtex'
-"Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
-"let g:tex_flavor='latex'
-"let g:Imap_UsePlaceHolders = 0
 
 " Enable surround
 Plugin 'tpope/vim-surround'
-
-" Enable JSHint
-"Plugin 'Shutnik/jshint2.vim'
-"let jshint2_read = 1
-"let jshint2_save = 1
-"let jshint2_confirm = 0
 
 " Enable Syntastic
 Plugin 'vim-syntastic/syntastic'
@@ -119,13 +93,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Enable typescript-vim
-"Plugin 'leafgarland/typescript-vim'
-
-" Enable floobits
-"Plugin 'Floobits/floobits-vim'
-
 " Trigger update after bundles loaded
+call vundle#end()
 if vundleinstalled == 0
 	PluginInstall
 endif
@@ -188,16 +157,3 @@ highlight ColorColumn ctermbg=None ctermfg=lightgrey
 
 " Always show min. 10 lines before/after current line
 set scrolloff=10
-
-autocmd BufRead,BufNewFile *.ts set expandtab shiftwidth=4
-autocmd BufRead,BufNewFile *.js set expandtab shiftwidth=2
-autocmd BufRead,BufNewFile *.html set expandtab shiftwidth=2
-autocmd BufRead,BufNewFile *.m  set expandtab shiftwidth=4
-autocmd BufRead,BufNewFile *.cuh  set syntax=cuda
-autocmd BufRead,BufNewFile *.tex set expandtab shiftwidth=2 modeline
-			\ spelllang=en_gb spell
-
-autocmd BufRead,BufNewFile **/opencv*/**/* set et ts=4 sw=4
-autocmd BufRead,BufNewFile ~/redwood_ws/** set expandtab shiftwidth=2 tabstop=2
-autocmd BufRead,BufNewFile ~/github/dark_shadow/** set expandtab shiftwidth=2 tabstop=2
-autocmd BufRead,BufNewFile ~/github/thesis/** set expandtab shiftwidth=2 tabstop=2
