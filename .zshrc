@@ -46,10 +46,10 @@ if [ -d "$GCLOUD_PATH" ]; then
 fi
 
 # CUDA related
-#export CUDA_PATH="/usr/local/cuda"
-#export LIBRARY_PATH="$CUDA_PATH/lib64:$LIBRARY_PATH"
-#export LD_LIBRARY_PATH="$CUDA_PATH/lib64:$LD_LIBRARY_PATH"
-#export PATH="$CUDA_PATH/bin:$PATH"
+export CUDA_PATH="/usr/local/cuda"
+export LIBRARY_PATH="$CUDA_PATH/lib64:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="$CUDA_PATH/lib64:$CUDA_PATH/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+export PATH="$CUDA_PATH/bin:$PATH"
 
 export CUDNN_PATH=$HOME/src/cudnn
 if [ -d "$CUDNN_PATH" ]; then
@@ -79,7 +79,7 @@ fi
 # Path to oh-my-zsh installation.
 # NOTE: Assumes placement of dotfiles repo at $HOME/.dotfiles
 export ZSH=$HOME/.dotfiles/oh-my-zsh
-ZSH_THEME="swook"
+ZSH_THEME="gallifrey"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
