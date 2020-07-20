@@ -23,9 +23,14 @@ export PYTHONPATH=$PYTHONPATH:"$HOME/src/caffe/build/python"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$HOME/src/caffe/build/lib"
 
 # For iBus
-#export GTK_IM_MODULE=ibus
-#export XMODIFIERS=@im=ibus
-#export QT_IM_MODULE=ibus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+# For fcitx
+#export XMODIFIERS="@im=fcitx"
+#export GTK_IM_MODULE=fcitx
+#export QT_IM_MODULE=fcitx
 
 # OpenMP related
 export OMP_NUM_THREADS=$(nproc)
