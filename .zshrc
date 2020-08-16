@@ -61,6 +61,12 @@ fi
 # 	. "$HOME/src/torch/install/bin/torch-activate"
 # fi
 
+export VIRTUALENVWRAPPER_PYTHON="$(which python3)"
+VIRTUALENVWRAPPER_SH="$HOME/.local/bin/virtualenvwrapper.sh"
+if [ -f "$VIRTUALENVWRAPPER_SH" ]; then
+	. "$VIRTUALENVWRAPPER_SH"
+fi
+
 
 #############################
 ## OH-MY-ZSH CONFIGURATION ##
