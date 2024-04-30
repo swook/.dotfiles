@@ -72,9 +72,8 @@ fi
 ## OH-MY-ZSH CONFIGURATION ##
 #############################
 
-# Path to oh-my-zsh installation.
-# NOTE: Assumes placement of dotfiles repo at $HOME/.dotfiles
-export ZSH=$HOME/.dotfiles/oh-my-zsh
+# Path to ohmyzsh installation.
+export ZSH=$HOME/.zsh/ohmyzsh
 ZSH_THEME="gallifrey"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -110,7 +109,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$ZSH/../.zsh
+ZSH_CUSTOM=$HOME/.zsh
 
 plugins=()
 

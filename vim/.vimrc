@@ -29,77 +29,64 @@ let &directory = swpdir . '/'
 let &backupdir = bkpdir . '/'
 let &undodir   = unddir . '/'
 
-" Switch filetype off for plugin/bundle loading
-filetype plugin indent off
-
-" For Vundle
-let bundledir = vimdir . 'bundle/'
-let vundledir = bundledir . 'Vundle.vim/'
-let vundleinstalled = 1
-if !isdirectory(vundledir)
-	let vundleinstalled = 0
-	execute 'silent !mkdir -p ' . bundledir
-	execute 'silent !git clone https://github.com/VundleVim/Vundle.vim.git ' . vundledir
+" For vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Use airline for a better statusline
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 
 " Use sensible defaults
-Plugin 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 
 " Use fugitive for git
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Start nerdtree on startup
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['^.git$', '\.pyc$', '\~$']
 autocmd vimenter * if !argc() | NERDTree | wincmd p | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Start nerdcommenter
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " Start gitgutter
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 highlight SignColumn ctermbg=None
 
 " Enable plugins for autocompletion
-Plugin 'Valloric/YouCompleteMe'
-let g:ycm_python_binary_path = 'python3'
+" Plug 'Valloric/YouCompleteMe'
+" let g:ycm_python_binary_path = 'python3'
 
 " Enable plugins for LaTeX
-Plugin 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 " Enable surround
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Enable Syntastic
-Plugin 'vim-syntastic/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+Plug 'vim-syntastic/syntastic'
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Trigger update after bundles loaded
-call vundle#end()
-if vundleinstalled == 0
-	PluginInstall
-endif
-filetype plugin indent on
-syntax on
+" Done with loading plugins
+call plug#end()
 
 " Mouse configurations
 if has('mouse')
