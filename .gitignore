@@ -1,5 +1,0 @@
-# During setup:
-#
-# if a file already exists where symlink target is,
-# it is moved to the following directory
-backups/
