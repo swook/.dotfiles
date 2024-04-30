@@ -1,0 +1,5 @@
+# Folders created via use of VIM usage
+vim/.vim/autoload/
+vim/.vim/plugged/
+vim/.vim/undos/
+vim/.vim/swaps/

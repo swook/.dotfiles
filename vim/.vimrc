@@ -9,7 +9,7 @@ set number
 "set showmatch
 set autoindent
 set smartindent
-set spell spelllang=en_gb
+set spell spelllang=en_us
 "set tabstop=8
 "set title
 
@@ -38,9 +38,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Use airline for a better statusline
-Plug 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
-let g:airline_right_sep = ''
+Plug 'vim-airline/vim-airline'
+"let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 
 " Use sensible defaults
