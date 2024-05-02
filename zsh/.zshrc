@@ -12,15 +12,16 @@ export EDITOR=vim
 # Personal binaries / scripts
 export PATH=$PATH:"$HOME/bin"
 export PATH=$PATH:"$HOME/scripts"
+export PATH=$PATH:"$HOME/.local/bin"
 
 # # Application / language package binaries
 # export PATH=$PATH:"$HOME/node_modules/.bin"
 # export PATH=$PATH:"$HOME/matlab/bin"
 # export PYTHONPATH="$HOME/.local/lib/python2.7/:$PYTHONPATH"
 
-# # Caffe
-# export PYTHONPATH=$PYTHONPATH:"$HOME/src/caffe/build/python"
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$HOME/src/caffe/build/lib"
+# Ruby Gems
+GEM_HOME="$HOME/gems"
+PATH="$HOME/gems/bin:$PATH"
 
 # For iBus
 export GTK_IM_MODULE=ibus

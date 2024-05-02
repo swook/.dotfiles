@@ -9,7 +9,8 @@ set number
 "set showmatch
 set autoindent
 set smartindent
-set spell spelllang=en_us
+set nospell
+"set spell spelllang=en_us
 "set tabstop=8
 "set title
 
